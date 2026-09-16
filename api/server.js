@@ -38,7 +38,7 @@ app.post('/api/subscribe', async (req, res) => {
 
     // 2. Enviar e-mail de boas-vindas via Resend
     await resend.emails.send({
-      from: 'BitSize <onboarding@resend.dev>', // Substitua pelo seu domínio verificado no Resend posteriormente
+      from: 'BitSize <onboarding@resend.dev>', // Substitua pelo seu domínio verificado no Resend futuramente
       to: [email],
       subject: 'Bem-vindo(a) à BitSize! 🍪',
       html: `
@@ -61,8 +61,13 @@ app.post('/api/subscribe', async (req, res) => {
   }
 });
 
-// Inicialização do servidor
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`🚀 Servidor rodando na porta ${PORT}`);
-});
+// Executa app.listen apenas quando rodar localmente fora da Vercel
+if (process.env.NODE_ENV !== 'production') {
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => {
+    console.log(`🚀 Servidor rodando na porta ${PORT}`);
+  });
+}
+
+// Exportação necessária para Serverless Functions na Vercel
+export default app;
