@@ -1,0 +1,300 @@
+/* Reset básico e tipografia */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #f7f4ed;
+  color: #2b3036;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* Tagline no Canto Superior Direito */
+.top-tagline {
+  position: absolute;
+  top: 2.5rem;
+  right: 4rem;
+  font-size: 0.95rem;
+  color: #666666;
+  font-weight: 500;
+}
+
+/* Container Principal */
+.main-wrapper {
+  width: 100%;
+  max-width: 1250px;
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+/* --- Coluna da Esquerda --- */
+.left-section {
+  flex: 1.2;
+  max-width: 650px;
+}
+
+/* Header da Logo com Imagem Local */
+.brand-header {
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo-img {
+  height: 52px; /* Ajuste a altura ideal para sua logo */
+  width: auto;
+  object-fit: contain;
+}
+
+/* Headline */
+.hero-title {
+  font-size: 3.8rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.2rem;
+  color: #111111;
+}
+
+.hero-title .highlight {
+  color: #e0531c;
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  color: #4a4a4a;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  max-width: 540px;
+}
+
+/* Form de Inscrição */
+.subscribe-form {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 4px;
+  border: 1px solid #e2ded4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  max-width: 540px;
+  margin-bottom: 0.8rem;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  flex: 1;
+}
+
+.mail-icon {
+  color: #888888;
+  margin-right: 0.6rem;
+}
+
+.subscribe-form input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: #111111;
+  background: transparent;
+}
+
+.subscribe-form input::placeholder {
+  color: #a0a0a0;
+}
+
+.submit-btn {
+  background-color: #e0531c;
+  color: #ffffff;
+  border: none;
+  padding: 0.9rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #c84513;
+}
+
+.disclaimer {
+  font-size: 0.85rem;
+  color: #777777;
+  margin-bottom: 3rem;
+}
+
+/* Recursos no Rodapé Esquerdo */
+.features-grid {
+  display: flex;
+  gap: 2rem;
+  border-top: 1px solid #e8e4d9;
+  padding-top: 1.8rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.feature-icon {
+  color: #e0531c;
+  display: flex;
+  align-items: center;
+}
+
+.feature-item strong {
+  display: block;
+  font-size: 0.88rem;
+  color: #111111;
+  line-height: 1.2;
+}
+
+.feature-item span {
+  font-size: 0.8rem;
+  color: #666666;
+}
+
+/* --- Coluna da Direita (Mockup Celular) --- */
+.right-section {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+}
+
+.phone-mockup {
+  width: 320px;
+  height: 620px;
+  background-color: #ffffff;
+  border: 10px solid #111111;
+  border-radius: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-notch {
+  width: 110px;
+  height: 18px;
+  background-color: #111111;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  z-index: 10;
+}
+
+.email-header {
+  display: flex;
+  align-items: center;
+  margin-top: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.mini-brand-img {
+  height: 22px; /* Ajustado proporcionalmente para a tela do celular */
+  width: auto;
+  object-fit: contain;
+}
+
+.email-body {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: #333333;
+}
+
+.email-greeting {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.email-intro {
+  color: #555555;
+  margin-bottom: 0.8rem;
+}
+
+.email-subtitle {
+  font-weight: 700;
+  font-size: 0.78rem;
+  margin-bottom: 0.8rem;
+  color: #111111;
+}
+
+.news-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.news-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.dot.orange { background-color: #ff5722; }
+.dot.yellow { background-color: #ffeb3b; }
+.dot.blue   { background-color: #2196f3; }
+.dot.green  { background-color: #4caf50; }
+.dot.purple { background-color: #9c27b0; }
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .top-tagline {
+    position: static;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .main-wrapper {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+  }
+
+  .left-section {
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .features-grid {
+    flex-wrap: wrap;
+    gap: 1.2rem;
+  }
+}

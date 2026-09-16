@@ -1,0 +1,157 @@
+/* Reset básico e tipografia */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #f7f4ed; /* Mesmo off-white da home */
+  color: #2b3036;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.brand-logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.brand-logo-img:hover {
+  transform: scale(1.03);
+}
+
+/* Container de Erro Centralizado */
+.error-container {
+  max-width: 620px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Visualização do Número 404 */
+.error-code-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.error-number {
+  font-size: 7.5rem;
+  font-weight: 900;
+  color: #2b3036;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.cookie-crumb {
+  color: #e0531c; /* Laranja da marca */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Animação suave para o ícone do meio */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(5deg);
+  }
+}
+
+/* Textos */
+.error-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111111;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.error-description {
+  font-size: 1.05rem;
+  color: #555555;
+  line-height: 1.5;
+  margin-bottom: 2.2rem;
+  max-width: 500px;
+}
+
+/* Botões de Ação */
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background-color: #e0531c;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.9rem 1.8rem;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(224, 83, 28, 0.2);
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #c84513;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(224, 83, 28, 0.3);
+}
+
+/* Footer */
+.footer {
+  font-size: 0.85rem;
+  color: #888888;
+  padding-bottom: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .error-number {
+    font-size: 5.5rem;
+  }
+
+  .cookie-crumb svg {
+    width: 65px;
+    height: 65px;
+  }
+
+  .error-title {
+    font-size: 1.6rem;
+  }
+
+  .error-description {
+    font-size: 0.95rem;
+  }
+}
