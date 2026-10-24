@@ -38,7 +38,7 @@ app.post('/api/subscribe', async (req, res) => {
 
     // 2. Enviar e-mail de boas-vindas via Resend
     await resend.emails.send({
-      from: 'BitSize <onboarding@resend.dev>', // Substitua pelo seu domínio verificado no Resend futuramente
+      from: 'BitSize <newsletter@bitsize.com.br>', // Substitua pelo seu domínio verificado no Resend futuramente
       to: [email],
       subject: 'Bem-vindo(a) à BitSize! 🍪',
       html: `
